@@ -102,22 +102,33 @@ class MLP:
         cache : dict
             Intermediate values from forward pass.
         """
+        # number of samples - used to average the gradient across all training points
         n_samples = y.shape[1]
 
         # Output layer gradient (MSE derivative: 2*(pred - true) / n, factor 2 absorbed into lr)
+        # difference between prediction and ground truth, averaged over all samples
         dZ2 = (output - y) / n_samples       # (1, n_samples)
 
+        # gradient of output weights - how much each W2 weight contributed to the error
         dW2 = dZ2 @ cache["A1"].T            # (1, n_hidden)
+
+        # gradient of output bias - summed over all samples since bias is shared
         db2 = np.sum(dZ2, axis=1, keepdims=True)  # (1, 1)
 
-        # Hidden layer gradient
+        # propagate error back through W2 to the hidden layer
         dA1 = self.W2.T @ dZ2               # (n_hidden, n_samples)
+
+        # pass gradient through sigmoid derivative to undo the activation function
         dZ1 = dA1 * self._sigmoid_derivative(cache["A1"])  # (n_hidden, n_samples)
 
+        # gradient of hidden weights - how much each W1 weight contributed to the error
         dW1 = dZ1 @ cache["X"].T            # (n_hidden, 1)
+
+        # gradient of hidden biases - summed over all samples since bias is shared
         db1 = np.sum(dZ1, axis=1, keepdims=True)  # (n_hidden, 1)
 
         # Gradient descent update
+        # subtract gradient scaled by learning rate - move in direction of decreasing error
         self.W2 -= self.learning_rate * dW2
         self.b2 -= self.learning_rate * db2
         self.W1 -= self.learning_rate * dW1
