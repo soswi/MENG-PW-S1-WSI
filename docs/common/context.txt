@@ -1,0 +1,56 @@
+Komunikujesz się ze mną po Polsku
+
+Zajmujemy się realizacją ćwiczenia laboratoryjnego z przedmiotu Wprowadzenie do sztucznej inteligencji (WSI).
+Dołączam dwa pliki — ZasadyOgólne.pdf i ZasadyĆwiczeń.pdf — które są absolutnie kluczowe. Zapoznaj się z nimi w pierwszej kolejności i przestrzegaj zawartych w nich zasad w 100%.
+Następnie zapoznaj się z plikiem zadania i powiedz mi co jest w nim napisane, zanim zaczniemy.
+Zasady pracy:
+
+Trzymamy się nazw zmiennych, funkcji i klas zgodnych z instrukcją zadania.
+Kod i komentarze piszemy po angielsku.
+Komentarze w kodzie we wszystkich kluczowych miejscach — krótko i zrozumiale, bez ozdobników.
+Implementujemy w .ipynb — kod źródłowy w Pythonie.
+Kod piszemy w całości od razu. Poprawki wprowadzamy tylko w odpowiednich miejscach — nie przebudowujemy całego kodu.
+Jeżeli sugerowane zmiany są duże — pytasz najpierw, zanim zaczniesz pisać. Użytkownik jest skłonny do modyfikacji własnych wymagań, szczególnie jeśli jest to potrzebne do poprawnej realizacji projektu i wypełnienia zasad.
+
+
+Zasady eksperymentów:
+
+Przy każdym eksperymencie, tabeli i wykresie musi być krótko, ale bardzo wyraźnie zaznaczone dla jakich konkretnych parametrów zostało uruchomione.
+
+Sposób pracy:
+
+Kod wykonuję sam u siebie. Pomagasz mi napisać kod z odpowiednimi danymi — zgodnymi z zasadami i wymaganiami.
+W nootebook po za wypisywaniem wyników na bierząco razem z wykresami, to należy je umieścić w jednym lub wielu plikach zbiorczych results w formacie odpowiednim dla danych (np. csv, json, md ...)
+Po wykonaniu kodu przesyłam wyniki, a na ich podstawie pomagasz wyciągnąć wnioski.
+Poprawność interpretacji wyników jest kluczowa — szczególnie zgodność wyników z wnioskami.
+
+Sprawozdanie:
+
+Format: Markdown (.md), bez ozdobników.
+Autor: Wiktor Sosnowski, numer albumu 348 561.
+Struktura i styl na wzór dostarczonego sprawozdania — patrz lista elementów poniżej.
+Język Polski
+
+
+Lista elementów sprawozdania (wzór):
+
+Strona tytułowa — przedmiot, numer ćwiczenia i temat, typ dokumentu (Raport z badań), semestr, rok akademicki, autor, numer albumu, data
+Treść zadania — dosłownie tak jak sformułował prowadzący
+Interpretacja zadania — wyjaśnienie celu i pojęć teoretycznych potrzebnych do wykonania
+Zbiór danych — opis danych wejściowych (jak wygenerowano, ile próbek, zakres, format)
+Wykres funkcji docelowej (jeśli dotyczy)
+Opis implementacji — krótki opis jak działa zaimplementowany model/algorytm, bez nadmiarowych szczegółów, tylko to co istotne dla zrozumienia eksperymentów
+Konfiguracja bazowa (Baseline) — parametry, tabela wyników (min, średnia, std, max), opis, wykres — uwzględniana tylko jeśli wynika z charakteru zadania
+Eksperymenty (jeden parametr na raz) — dla każdego:
+
+Jawnie podane stałe parametry i badany zakres
+Tabele z parametrami pozwalające wyciągnąć wnioski, dobrane do charakteru eksperymentu, np. tabela MSE (min, średnia, std, max), tabela MAE (min, średnia, std, max), inne jeśli potrzebne
+Opis wyników tabeli
+Wykresy/wizualizacje wyników, dobrane do charakteru eksperymentu
+Wnioski z eksperymentu
+
+
+Wnioski końcowe — tabela zestawienia najlepszych parametrów + podsumowanie tekstowe
+
+
+Przypomnienie: Pliki ZasadyOgólne.pdf i ZasadyĆwiczeń.pdf są dołączone do tej wiadomości i muszą być przestrzegane w 100% przez cały czas trwania pracy.
