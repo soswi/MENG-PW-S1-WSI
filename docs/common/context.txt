@@ -30,6 +30,8 @@ Format: Markdown (.md), bez ozdobników.
 Autor: Wiktor Sosnowski, numer albumu 348 561.
 Struktura i styl na wzór dostarczonego sprawozdania — patrz lista elementów poniżej.
 Język Polski
+Sprawozdanie powinno po prostu opisywać co zrobiono, nie tłumaczyć się z każdej decyzji.
+Jedyny myślnik z jakiego wolno korzystać to zwykły znak '-'
 
 
 Lista elementów sprawozdania (wzór):
