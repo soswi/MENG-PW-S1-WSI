@@ -105,9 +105,19 @@ Liczba epizodów ustawiona na 100, ponieważ przy tej wartości różnice międz
 | 0,7 | 13,00 | 13,00 | 0,00 | 13,00 |
 | 0,9 | 13,00 | 13,00 | 0,00 | 13,00 |
 
-![Eksperyment 1 - alpha](plots/assignment_06/experiment1_alpha.png)
+![Krzywa uczenia alpha=0,1](plots/assignment_06/experiment1_alpha_01.png)
 
-![Eksperyment 1 - alpha, liczba kroków](plots/assignment_06/experiment1_alpha_steps.png)
+![Krzywa uczenia alpha=0,3](plots/assignment_06/experiment1_alpha_03.png)
+
+![Krzywa uczenia alpha=0,5](plots/assignment_06/experiment1_alpha_05.png)
+
+![Krzywa uczenia alpha=0,7](plots/assignment_06/experiment1_alpha_07.png)
+
+![Krzywa uczenia alpha=0,9](plots/assignment_06/experiment1_alpha_09.png)
+
+![Srednia nagroda vs alpha](plots/assignment_06/experiment1_alpha.png)
+
+![Srednia liczba krokow vs alpha](plots/assignment_06/experiment1_alpha_steps.png)
 
 Przy alpha=0,1 agent w żadnym z 25 uruchomień nie zdołał nauczyć się właściwej polityki w ciągu 100 epizodów - wynik -200 odpowiada limitowi 200 kroków, co oznacza brak zbieżności. Mały współczynnik uczenia powoduje, że wartości Q aktualizowane są bardzo wolno i 100 epizodów to za mało, by zgromadzić wystarczającą wiedzę.
 

@@ -104,7 +104,7 @@ Algorytm ID3 jest z natury deterministyczny - przy ustalonych danych treningowyc
 
 ![Wykres eksperymentu 1](exp1_depth_accuracy.png)
 
-Wyniki na zbiorze walidacyjnym i testowym rosną wraz z głębokością do poziomu max_depth = 7, po czym pozostają niezmienione dla wartości 8, 9 i None. Oznacza to, że drzewo budowane na tym zbiorze danych nie przekracza głębokości 7 nawet bez ograniczeń - dalsze zwiększanie parametru nie ma już wpływu. Najniższą dokładność uzyskano dla max_depth = 2, ponieważ przy głębokości 1 drzewo stosuje tylko jeden podział i uzyskuje wyższy wynik niż przy 2, gdzie dodatkowy podział nie kompensuje jeszcze utraty informacji. Wzrost dokładności między max_depth = 4 a 5 jest najwyraźniejszy (około 6 punktów procentowych na zbiorze testowym), co sugeruje, że na tym poziomie głębokości drzewo zaczyna uchwytywać najistotniejsze zależności w danych.
+Wyniki na zbiorze walidacyjnym i testowym rosną wraz z głębokością do poziomu max_depth = 7, po czym pozostają niezmienione dla wartości 8, 9 i None. Oznacza to, że drzewo budowane na tym zbiorze danych nie przekracza głębokości 7 nawet bez ograniczeń - dalsze zwiększanie parametru nie ma już wpływu. Najniższą dokładność uzyskano dla max_depth = 2, ponieważ przy głębokości 1 drzewo stosuje tylko jeden podział i uzyskuje wyższy wynik niż przy 2, gdzie dodatkowy podział nie kompensuje jeszcze utraty informacji. Wzrost dokładności między max_depth = 4 a 5 jest najwyraźniejszy (około 6 punktów procentowych na zbiorze testowym), co sugeruje, że na tym poziomie głębokości drzewo zaczyna wychwytywać najistotniejsze zależności w danych.
 
 Nie zaobserwowano objawów przeuczenia - dokładność na zbiorze testowym jest zbliżona do walidacyjnej na każdym poziomie głębokości.
 
