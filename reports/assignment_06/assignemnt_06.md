@@ -70,7 +70,7 @@ Uzyto srodowiska `CliffWalking-v1` z pakietu gymnasium z domyslnym parametrem `i
 | nagroda | -13,00 | -13,00 | 0,00 | -13,00 |
 | liczba krokow | 13,00 | 13,00 | 0,00 | 13,00 |
 
-Przy konfiguracji bazowej agent we wszystkich 25 uruchomieniach osiaga wynik -13 (13 krokow). Jest to oczekiwany wynik dla Q-learning w tym srodowisku - agent uczy sie bezpiecznej sciezki gornym skrajem siatki, unikajac klifu. Przy 500 epizodach i alpha=0,5 algorytm zbiega pewnie i bezszkodliwie niezaleznie od ziarna losowego.
+Przy konfiguracji bazowej we wszystkich 25 uruchomieniach agent osiaga wynik -13 (13 krokow) - min, srednia, max i std sa identyczne. Jest to oczekiwany wynik dla Q-learning w tym srodowisku - agent uczy sie bezpiecznej sciezki gornym skrajem siatki, unikajac klifu.
 
 ![Krzywa uczenia baseline](plots/assignment_06/baseline_learning_curve.png)
 
@@ -113,9 +113,9 @@ Przy alpha=0,1 agent w zadnym z 25 uruchomien nie zdolal nauczyc sie wlasciwej p
 
 Przy alpha=0,3 wyniki sa niejednorodne: srednia -20,56 ze standardowym odchyleniem 36,63 wskazuje, ze czesc uruchomien zbiega do optimum (-13), a czesc nie - co potwierdza max=-13 i min=-200. Wspolczynnik jest juz wystarczajacy do zbieznosci, ale nie w sposob pewny.
 
-Od alpha=0,5 wyzej algorytm zbiega pewnie do wyniku -13 we wszystkich 25 uruchomieniach (std=0). Wieksze wartosci alpha przyspieszaja uczenie, przez co 100 epizodow jest wystarczajace.
+Od alpha=0,5 wyzej we wszystkich 25 uruchomieniach wynik ewaluacyjny wynosi -13, a std=0 - brak jakiejkolwiek zmiennosci miedzy uruchomieniami. Wieksze wartosci alpha przyspieszaja uczenie, przez co 100 epizodow jest wystarczajace.
 
-**Wniosek:** Zbyt maly wspolczynnik uczenia (alpha=0,1) uniemozliwia zbieznosc przy ograniczonej liczbie epizodow. Wartosci alpha od 0,5 wzwyz daja pewna zbieznosc do optimum przy 100 epizodach. W tym srodowisku optymalny zakres to alpha >= 0,5 przy 100 epizodach treningowych.
+**Wniosek:** Zbyt maly wspolczynnik uczenia (alpha=0,1) uniemozliwia zbieznosc przy 100 epizodach - zadne z 25 uruchomien nie osiaga celu (std=0, mean=-200). Wartosci alpha od 0,5 wzwyz daja wynik -13 we wszystkich 25 uruchomieniach (std=0). W tym srodowisku optymalny zakres to alpha >= 0,5 przy 100 epizodach treningowych.
 
 ---
 
@@ -158,7 +158,7 @@ Przy 50 epizodach widoczna jest niejednorodnosc wynikow: srednia -95,28 ze stand
 
 Od 75 epizodow agent zbiega do optymalnego wyniku -13 we wszystkich 25 uruchomieniach. Zwiekszanie liczby epizodow powyzej 75 nie poprawia juz wyniku ewaluacyjnego - algorytm osiaga optimum, ktorego nie mozna przekroczyc bez zmiany epsilon lub gamma.
 
-**Wniosek:** Przy alpha=0,5 wystarczy okolo 75 epizodow treningowych, by Q-learning pewnie zbiegal do optymalnej polityki we wszystkich uruchomieniach. Dalsze zwiekszanie liczby epizodow nie przynosi poprawy wyniku ewaluacyjnego.
+**Wniosek:** Przy alpha=0,5 juz 75 epizodow treningowych wystarczy, by we wszystkich 25 uruchomieniach uzyskac wynik -13 (std=0). Dalsze zwiekszanie liczby epizodow nie przynosi poprawy wyniku ewaluacyjnego.
 
 ---
 
@@ -171,8 +171,8 @@ Od 75 epizodow agent zbiega do optymalnego wyniku -13 we wszystkich 25 uruchomie
 
 Q-learning skutecznie rozwiazuje problem Cliff Walking. Algorytm uczy sie bezpiecznej polityki gornym skrajem siatki (nagroda -13, 13 krokow), a nie optymalnej w sensie teorii (-12, 12 krokow wzdluz klifu). Jest to typowe zachowanie Q-learning: podczas eksploracji agent wpada na klif, co penalizuje sciezke krawedzia na tyle, ze preferowana staje sie dluzsza, ale bezpieczniejsza trasa.
 
-Wspolczynnik uczenia alpha ma istotny wplyw na szybkosc zbieznosci. Zbyt mala wartosc (alpha=0,1) powoduje, ze aktualizacje Q sa na tyle wolne, ze algorytm nie zbiega przy 100 epizodach. Wartosci od 0,5 wzwyz daja stabilna zbieznosc.
+Wspolczynnik uczenia alpha ma istotny wplyw na szybkosc zbieznosci. Przy alpha=0,1 zadne z 25 uruchomien nie osiaga celu w ciagu 100 epizodow. Przy alpha=0,5 i wyzej wszystkie 25 uruchomien daje identyczny wynik -13 (std=0).
 
-Liczba epizodow treningowych wyznacza, czy agent zdazy zebrala wystarczajaca liczbe obserwacji. Przy alpha=0,5 wystarczy 75 epizodow. Zbyt mala liczba epizodow daje niestabilne lub zerowe wyniki; po osiagnieciu progu zbieznosci dalsze epizody nie maja wplywu na wynik ewaluacyjny.
+Liczba epizodow treningowych wyznacza, czy agent zdazy zebrac wystarczajaca liczbe obserwacji. Przy alpha=0,5 i 10-30 epizodach zadne z 25 uruchomien nie osiaga celu. Przy 75 epizodach wszystkie 25 uruchomien daje wynik -13 (std=0) i dalsze zwiekszanie liczby epizodow nie zmienia tego wyniku.
 
 Oba parametry wplywaja na zbieznosc w podobny sposob: niewystarczajace wartosci uniemozliwiaja nauke, a po przekroczeniu progu wynik stabilizuje sie na optimum i nie mozna go dalej poprawic przez same zwiekszanie alpha lub liczby epizodow.

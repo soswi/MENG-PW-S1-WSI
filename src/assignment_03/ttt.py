@@ -97,8 +97,12 @@ def build_player(player_type: str, player_name: str, depth_limit: int):
 
 
 def default_depth(board_size: int) -> int:
-    """Default full-tree depth limit per board size."""
-    return board_size * board_size
+    """Default depth limit per board size.
+    3x3: full tree (9). Larger boards: capped at 6 to keep computation feasible.
+    """
+    if board_size <= 3:
+        return board_size * board_size
+    return 6
 
 
 if __name__ == "__main__":
@@ -107,9 +111,9 @@ if __name__ == "__main__":
 
     player1_type = sys.argv[1] if len(sys.argv) > 1 else "random"
     player2_type = sys.argv[2] if len(sys.argv) > 2 else "random"
-    board_size    = int(sys.argv[3]) if len(sys.argv) > 3 else 3
-    depth1        = int(sys.argv[4]) if len(sys.argv) > 4 else default_depth(board_size)
-    depth2        = int(sys.argv[5]) if len(sys.argv) > 5 else default_depth(board_size)
+    board_size   = int(sys.argv[3]) if len(sys.argv) > 3 else 3
+    depth1       = int(sys.argv[4]) if len(sys.argv) > 4 else default_depth(board_size)
+    depth2       = int(sys.argv[5]) if len(sys.argv) > 5 else default_depth(board_size)
 
     player1 = build_player(player1_type, "o", depth1)
     player2 = build_player(player2_type, "x", depth2)
