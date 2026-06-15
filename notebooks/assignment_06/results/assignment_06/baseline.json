@@ -1,0 +1,21 @@
+{
+  "config": {
+    "alpha": 0.5,
+    "gamma": 0.99,
+    "epsilon": 0.1,
+    "num_episodes": 500
+  },
+  "n_runs": 25,
+  "reward": {
+    "min": -13.0,
+    "mean": -13.0,
+    "std": 0.0,
+    "max": -13.0
+  },
+  "steps": {
+    "min": 13.0,
+    "mean": 13.0,
+    "std": 0.0,
+    "max": 13.0
+  }
+}

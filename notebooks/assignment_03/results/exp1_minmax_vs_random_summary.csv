@@ -1,0 +1,5 @@
+board_size,depth_limit,minmax_side,wins,draws,losses,win_%,draw_%,loss_%,avg_minmax_time_ms
+3,9,o,25,0,0,100.0,0.0,0.0,182.49
+3,9,x,17,8,0,68.0,32.0,0.0,35.61
+4,6,o,22,3,0,88.0,12.0,0.0,2064.09
+4,6,x,14,11,0,56.0,44.0,0.0,1466.03

@@ -21,6 +21,7 @@ Sposób pracy:
 
 Kod wykonuję sam u siebie. Pomagasz mi napisać kod z odpowiednimi danymi — zgodnymi z zasadami i wymaganiami.
 W nootebook po za wypisywaniem wyników na bierząco razem z wykresami, to należy je umieścić w jednym lub wielu plikach zbiorczych results w formacie odpowiednim dla danych (np. csv, json, md ...)
+Nootbook po za wyświetleniem wykresów powinien je też zapisać do plików.
 Po wykonaniu kodu przesyłam wyniki, a na ich podstawie pomagasz wyciągnąć wnioski.
 Poprawność interpretacji wyników jest kluczowa — szczególnie zgodność wyników z wnioskami.
 
@@ -32,6 +33,7 @@ Struktura i styl na wzór dostarczonego sprawozdania — patrz lista elementów 
 Język Polski
 Sprawozdanie powinno po prostu opisywać co zrobiono, nie tłumaczyć się z każdej decyzji.
 Jedyny myślnik z jakiego wolno korzystać to zwykły znak '-'
+Ustawiasz placeholder na obrazy (np. ![wykres](nazwa_pliku.png))
 
 
 Lista elementów sprawozdania (wzór):
