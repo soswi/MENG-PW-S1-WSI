@@ -1,0 +1,141 @@
+{
+  "baseline": {
+    "params": {
+      "p_in_office": 0.4,
+      "p_light_on_given_in": 0.5,
+      "p_light_on_given_out": 0.05,
+      "p_teams_on_given_in": 0.8,
+      "p_teams_on_given_out": 0.05
+    },
+    "p_light_on_prior": 0.23,
+    "p_light_on_given_teams": 0.4614
+  },
+  "exp1_p_in_office": [
+    {
+      "P(in_office)": 0.1,
+      "P(Light=on)": 0.095,
+      "P(Light=on | Teams=on)": 0.338,
+      "Roznica": 0.243
+    },
+    {
+      "P(in_office)": 0.2,
+      "P(Light=on)": 0.14,
+      "P(Light=on | Teams=on)": 0.41,
+      "Roznica": 0.27
+    },
+    {
+      "P(in_office)": 0.4,
+      "P(Light=on)": 0.23,
+      "P(Light=on | Teams=on)": 0.4614,
+      "Roznica": 0.2314
+    },
+    {
+      "P(in_office)": 0.6,
+      "P(Light=on)": 0.32,
+      "P(Light=on | Teams=on)": 0.482,
+      "Roznica": 0.162
+    },
+    {
+      "P(in_office)": 0.8,
+      "P(Light=on)": 0.41,
+      "P(Light=on | Teams=on)": 0.4931,
+      "Roznica": 0.0831
+    }
+  ],
+  "exp2_p_light_given_in": [
+    {
+      "P(Light=on | in office)": 0.1,
+      "P(Light=on)": 0.07,
+      "P(Light=on | Teams=on)": 0.0957,
+      "Roznica": 0.0257
+    },
+    {
+      "P(Light=on | in office)": 0.25,
+      "P(Light=on)": 0.13,
+      "P(Light=on | Teams=on)": 0.2329,
+      "Roznica": 0.1029
+    },
+    {
+      "P(Light=on | in office)": 0.5,
+      "P(Light=on)": 0.23,
+      "P(Light=on | Teams=on)": 0.4614,
+      "Roznica": 0.2314
+    },
+    {
+      "P(Light=on | in office)": 0.75,
+      "P(Light=on)": 0.33,
+      "P(Light=on | Teams=on)": 0.69,
+      "Roznica": 0.36
+    },
+    {
+      "P(Light=on | in office)": 0.9,
+      "P(Light=on)": 0.39,
+      "P(Light=on | Teams=on)": 0.8271,
+      "Roznica": 0.4371
+    }
+  ],
+  "exp3_p_teams_given_in": [
+    {
+      "P(Teams=on | in office)": 0.2,
+      "P(Light=on)": 0.23,
+      "P(Light=on | Teams=on)": 0.3773,
+      "Roznica": 0.1473
+    },
+    {
+      "P(Teams=on | in office)": 0.4,
+      "P(Light=on)": 0.23,
+      "P(Light=on | Teams=on)": 0.4289,
+      "Roznica": 0.1989
+    },
+    {
+      "P(Teams=on | in office)": 0.6,
+      "P(Light=on)": 0.23,
+      "P(Light=on | Teams=on)": 0.45,
+      "Roznica": 0.22
+    },
+    {
+      "P(Teams=on | in office)": 0.8,
+      "P(Light=on)": 0.23,
+      "P(Light=on | Teams=on)": 0.4614,
+      "Roznica": 0.2314
+    },
+    {
+      "P(Teams=on | in office)": 0.95,
+      "P(Light=on)": 0.23,
+      "P(Light=on | Teams=on)": 0.4671,
+      "Roznica": 0.2371
+    }
+  ],
+  "exp4_p_teams_given_out": [
+    {
+      "P(Teams=on | remote)": 0.01,
+      "P(Light=on)": 0.23,
+      "P(Light=on | Teams=on)": 0.4917,
+      "Roznica": 0.2617
+    },
+    {
+      "P(Teams=on | remote)": 0.05,
+      "P(Light=on)": 0.23,
+      "P(Light=on | Teams=on)": 0.4614,
+      "Roznica": 0.2314
+    },
+    {
+      "P(Teams=on | remote)": 0.15,
+      "P(Light=on)": 0.23,
+      "P(Light=on | Teams=on)": 0.4012,
+      "Roznica": 0.1712
+    },
+    {
+      "P(Teams=on | remote)": 0.3,
+      "P(Light=on)": 0.23,
+      "P(Light=on | Teams=on)": 0.338,
+      "Roznica": 0.108
+    },
+    {
+      "P(Teams=on | remote)": 0.5,
+      "P(Light=on)": 0.23,
+      "P(Light=on | Teams=on)": 0.2823,
+      "Roznica": 0.0523
+    }
+  ]
+}
