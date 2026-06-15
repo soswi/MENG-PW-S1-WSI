@@ -74,7 +74,7 @@ Badany parametr: learning_rate w zbiorze {0,001; 0,01; 0,1; 0,4; 0,9}.
 | 0,4           | 11              | 8,39e-14            | tak       |
 | 0,9           | 77              | 2,38e-13            | tak       |
 
-Dla funkcji sferycznej wszystkie badane wartości kroku prowadzą do zbieżności. Wraz ze wzrostem kroku liczba iteracji maleje: od 8 571 dla lr = 0,001 do zaledwie 11 dla lr = 0,4. Krok lr = 0,9 wymaga takiej samej liczby iteracji jak lr = 0,1 (77), co wskazuje na lekkie przekraczanie minimum i cofanie się - widoczne na wykresie logarytmicznym jako bardziej strome, ale krótsze schodzenie. Wszystkie przebiegi osiągają wartość funkcji rzędu 1e-13, czyli praktycznie zero w arytmetyce zmiennoprzecinkowej.
+Dla funkcji sferycznej wszystkie badane wartości kroku prowadzą do zbieżności. Wraz ze wzrostem kroku liczba iteracji maleje: od 8 571 dla lr = 0,001 do zaledwie 11 dla lr = 0,4. Krok lr = 0,9 wymaga takiej samej liczby iteracji jak lr = 0,1 (77), ponieważ dla funkcji Sphere współczynnik zbieżności wynosi |1 - 2·lr|, a wartości 0,1 i 0,9 dają identyczny wynik: |1 - 0,2| = |1 - 1,8| = 0,8 - różni je jedynie kierunek przekroczenia minimum, nie tempo zbieżności. Krok lr = 0,4 jest optymalny, gdyż minimalizuje ten współczynnik do 0,2, stąd zaledwie 11 iteracji. Wszystkie przebiegi osiągają wartość funkcji rzędu 1e-13, czyli praktycznie zero w arytmetyce zmiennoprzecinkowej.
 
 Dla funkcji sferycznej optymalną wartością kroku jest lr = 0,4 - najszybsza zbieżność przy zachowaniu stabilności. Dla tej klasy funkcji (wypukłe, gładkie, symetryczne) większe kroki są bezpieczne.
 
